@@ -15,5 +15,5 @@ app.use(routes);
 // importa automaticamente tudo que estiver dentro da pasta models.
 requireDir('./models');
 
-app.listen(3333, () => console.log('Welcome V12 you application ir running on port 3333'))
+app.listen(3333, () => console.log('Welcome V12 your application is running on port 3333'))
 
