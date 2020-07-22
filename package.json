@@ -11,12 +11,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@decorators/mongoose": "^3.0.1",
     "@types/cors": "^2.8.6",
     "@types/mongoose": "^5.7.32",
     "@types/require-dir": "^1.0.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.9.25",
+    "reflect-metadata": "^0.1.13",
     "require-dir": "^1.2.0"
   },
   "devDependencies": {
