@@ -23,7 +23,7 @@ const driver: DriverDTO = {
   createdAt: Date.now,
   updatedAt:Date.now
 }
-  const checkIfDriverExists = await Driver.findOne({'name': name})
+  const checkIfDriverExists = await Driver.findOne({'CPF': CPF})
   if(checkIfDriverExists){
     return res.status(400).json('user already exists')
   }
