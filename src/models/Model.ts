@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose, { model } from 'mongoose';
 
 const VehicleSchema = new mongoose.Schema({
   
@@ -52,6 +52,8 @@ const DriverSchema = new mongoose.Schema({
   
 });
 
-mongoose.model('Vehicle', VehicleSchema );
+//mongoose.model('Vehicle', VehicleSchema );
 
-mongoose.model('Driver', DriverSchema);
+//mongoose.model('Driver', DriverSchema);
+
+export default mongoose.model('DriverSchema',DriverSchema)

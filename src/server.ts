@@ -1,6 +1,7 @@
+import 'reflect-metadata'; // Enable decorators
 import express from 'express';
 import routes from './routes/index';
-import './database/index';
+//import './database/index';
 import cors from 'cors';
 import requireDir from 'require-dir';
 
