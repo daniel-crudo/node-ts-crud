@@ -6,6 +6,8 @@ const Driver = Router()
 Driver.post('/',DriverRepository.create )
 
 Driver.get('/', DriverRepository.list)
+
+Driver.put('/', DriverRepository.update)
 //Driver.get('/', (request, response) => {
 //response.json('Olá')
 

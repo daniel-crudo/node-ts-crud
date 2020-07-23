@@ -30,6 +30,28 @@ const driver: DriverDTO = {
   await Driver.create(driver)
   return res.json(driver);
 }
+public async update(req:Request , res:Response): Promise<Response>{
+  const {name,status,lastName,Date,CPF} = req.body;
+  const updateUsers = await Driver.findOne({'CPF': CPF})
+  console.log(status)
+  if (!CPF) {
+    return res.status(400).json('you must type a valid CPF')
+  } if (status == 'Ativo' || status == 'Inativo') {
+    //@ts-ignore
+  status?updateUsers.status = status:null
+  }
+  //@ts-ignore
+  name?updateUsers.name = name:null
+  //@ts-ignore
+  lastName?updateUsers.lastName = lastName:null
+  //@ts-ignore
+  Date?updateUsers.Date = Date:null
+  //@ts-ignore
+  CPF?updateUsers.CPF = CPF:null
+  
+  await updateUsers?.save() 
+  return res.json(updateUsers);
+}
 
 }
 
