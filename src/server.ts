@@ -1,7 +1,7 @@
 import 'reflect-metadata'; // Enable decorators
 import express from 'express';
 import routes from './routes/index';
-//import './database/index';
+import './database/index';
 import cors from 'cors';
 import requireDir from 'require-dir';
 
@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(routes);
 
 // importa automaticamente tudo que estiver dentro da pasta models.
-requireDir('./models');
+// requireDir('./models');
 
 app.listen(3333, () => console.log('Welcome V12 your application is running on port 3333'))
 

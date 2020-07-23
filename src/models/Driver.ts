@@ -1,23 +1,5 @@
-import mongoose, { model } from 'mongoose';
-
-const VehicleSchema = new mongoose.Schema({
-  
-  renavam: {
-    type: Number,
-    required: false
-  },
-  propName: {
-    type: String,
-    required: false
-  },
-  licensePlate: {
-    type: String,
-    required: false
-  }
-
-});
-
-const DriverSchema = new mongoose.Schema({
+import { Schema, model } from 'mongoose';
+const Driver = new Schema({
 
   name: {
     type: String,
@@ -40,6 +22,7 @@ const DriverSchema = new mongoose.Schema({
     required: true,
     default: 'Ativo'
   },
+  vehicleList:[],
   createdAt: {
     type: Date,
     default: Date.now
@@ -48,7 +31,6 @@ const DriverSchema = new mongoose.Schema({
     type: Date,
     default: Date.now
   },
-  vehicleList:[VehicleSchema]
   
 });
 
@@ -56,4 +38,4 @@ const DriverSchema = new mongoose.Schema({
 
 //mongoose.model('Driver', DriverSchema);
 
-export default mongoose.model('DriverSchema',DriverSchema)
+export default model('Driver',Driver)

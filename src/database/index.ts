@@ -1,6 +1,8 @@
 import mongoose from 'mongoose';
 import requireDir from 'require-dir';
-import '../models/Model'
+import '../models/Driver'
+import '../models/Vehicle'
+
 
 requireDir('../models')
 
